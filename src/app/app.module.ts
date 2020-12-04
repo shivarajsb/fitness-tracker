@@ -17,6 +17,12 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { WorkoutsServiceComponent } from './Services/workouts-service/workouts-service.component';
 import { CommonModule } from '@angular/common';
 import { CreateComponent } from './Components/create/create.component';
+import { CreateWorkoutComponent } from './Components/create-workout/create-workout.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCardActions, MatCardModule } from '@angular/material/card';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +32,7 @@ import { CreateComponent } from './Components/create/create.component';
     DashboardComponent,
     WorkoutsServiceComponent,
     CreateComponent,
+    CreateWorkoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +45,11 @@ import { CreateComponent } from './Components/create/create.component';
     MatIconModule,
     MatListModule,
     CommonModule,
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatCardModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
