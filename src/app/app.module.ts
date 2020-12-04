@@ -14,7 +14,6 @@ import { MatListModule } from '@angular/material/list';
 import { WorkoutsListComponent } from './Components/workouts-list/workouts-list.component';
 import { WorkoutDetailComponent } from './Components/workout-detail/workout-detail.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
-import { WorkoutsServiceComponent } from './Services/workouts-service/workouts-service.component';
 import { CommonModule } from '@angular/common';
 import { CreateComponent } from './Components/create/create.component';
 import { CreateWorkoutComponent } from './Components/create-workout/create-workout.component';
@@ -33,7 +32,6 @@ import { HttpClientModule } from '@angular/common/http';
     WorkoutsListComponent,
     WorkoutDetailComponent,
     DashboardComponent,
-    WorkoutsServiceComponent,
     CreateComponent,
     CreateWorkoutComponent,
   ],
