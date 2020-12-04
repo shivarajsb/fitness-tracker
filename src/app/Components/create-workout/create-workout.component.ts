@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { WorkoutServiceService } from 'src/app/Services/workout-service.service';
+import { v4 as uuid } from 'uuid';
 
 @Component({
   selector: 'app-create-workout',
@@ -13,9 +15,17 @@ export class CreateWorkoutComponent {
     createdAt: [Date.now(), Validators.required],
   });
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private workout: WorkoutServiceService
+  ) {}
 
   onSubmit() {
-    alert('Thanks!');
+    console.log(this.addressForm.value);
+    let id = uuid();
+    const { title, description } = this.addressForm.value;
+    console.log({ title, description, id });
+    console.log(this.workout.createWorkouts({ title, description, id }));
+    this.addressForm.reset();
   }
 }
