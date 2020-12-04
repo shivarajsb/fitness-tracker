@@ -9,7 +9,11 @@
   >
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#" [routerLink]="['/workouts', 'create']"
+      <a
+        mat-list-item
+        href="#"
+        [routerLink]="['/workouts', 'create']"
+        routerLinkActive="active"
         >Create Workouts</a
       >
       <a mat-list-item href="#" [routerLink]="['/workouts']">Workouts</a>
