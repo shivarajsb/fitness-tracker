@@ -17,7 +17,7 @@ export class WorkoutServiceService {
   }
 
   createWorkouts({ title, description, id }: CreateWorkout) {
-    this.workouts.push({ title, description, id });
+    this.workouts.unshift({ title, description, id });
     this.workoutsUpdated.next();
   }
 
