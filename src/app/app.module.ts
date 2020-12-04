@@ -27,6 +27,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import { WorkoutServiceService } from './Services/workout-service.service';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,8 +59,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatExpansionModule,
     MatGridListModule,
     HttpClientModule,
+    ToastrModule.forRoot(),
   ],
-  providers: [WorkoutServiceService],
+  providers: [WorkoutServiceService, ToastrService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
