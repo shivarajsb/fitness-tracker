@@ -5,3 +5,9 @@ export interface CreateWorkout {
   description: string;
   id: string;
 }
+
+export interface Workout {
+  title: string;
+  description: string;
+  id: string;
+}

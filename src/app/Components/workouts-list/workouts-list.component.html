@@ -1,3 +1,15 @@
-<mat-card>
-  <p>workouts-list works!</p>
+<mat-card class="matCard">
+  <mat-card-title>Workouts</mat-card-title>
+  <div *ngFor="let workout of workouts" class="listItem">
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header class="expansionHeader">
+          {{ workout.title }}
+        </mat-expansion-panel-header>
+        <mat-panel-description class="expansionDescription">
+          {{ workout.description }}
+        </mat-panel-description>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
 </mat-card>

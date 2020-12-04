@@ -1,36 +1,43 @@
-<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
-  <mat-card class="shipping-card">
-    <mat-card-header>
-      <mat-card-title>Create Workout</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <div class="row">
-        <div class="col">
-          <mat-form-field class="full-width">
-            <input
-              matInput
-              placeholder="Workout Title"
-              formControlName="title"
-            />
-          </mat-form-field>
+<div class="centeredCss">
+  <form
+    [formGroup]="addressForm"
+    novalidate
+    (ngSubmit)="onSubmit()"
+    class="formElem"
+  >
+    <mat-card class="shipping-card">
+      <mat-card-header>
+        <mat-card-title>Create Workout</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input
+                matInput
+                placeholder="Workout Title"
+                formControlName="title"
+              />
+            </mat-form-field>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <mat-form-field class="full-width">
-            <input
-              matInput
-              placeholder="Workout Title"
-              formControlName="description"
-            />
-          </mat-form-field>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <textarea
+                matInput
+                placeholder="Description"
+                formControlName="description"
+              ></textarea>
+            </mat-form-field>
+          </div>
         </div>
+      </mat-card-content>
+      <div class="centeredCss">
+        <button mat-raised-button matRipple color="primary" type="submit">
+          Submit
+        </button>
       </div>
-    </mat-card-content>
-    <div class="centeredCss">
-      <button mat-raised-button matRipple color="primary" type="submit">
-        Submit
-      </button>
-    </div>
-  </mat-card>
-</form>
+    </mat-card>
+  </form>
+</div>

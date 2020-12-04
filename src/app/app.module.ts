@@ -25,6 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatRippleModule } from '@angular/material/core';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
+import { WorkoutServiceService } from './Services/workout-service.service';
+import { MatExpansionModule } from '@angular/material/expansion';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,10 +54,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     ReactiveFormsModule,
     MatRippleModule,
+    MatExpansionModule,
     MatGridListModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [WorkoutServiceService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
